@@ -1,0 +1,1022 @@
+{
+    "groups": {
+        "general": {
+            "modules": {
+                "html_pages": {
+                    "actions": {
+                        "v1.html_pages.create.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.delete.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.edit.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.filters.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.index.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.page.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        }
+                    }
+                },
+                "countries": {
+                    "actions": {
+                        "v1.countries.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.countries.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.countries.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "code",
+                                "accept_ata"
+                            ],
+                            "param": []
+                        },
+                        "v1.countries.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "code",
+                                "accept_ata"
+                            ],
+                            "param": []
+                        },
+                        "v1.countries.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "value",
+                                "text"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "transports": {
+                    "actions": {
+                        "v1.transports.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.transports.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.transports.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ro",
+                                "name_en",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.transports.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ro",
+                                "name_en",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.transports.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ro",
+                                "name_en",
+                                "name_ru"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "clients": {
+                    "actions": {
+                        "v1.clients.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.clients.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.clients.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "type",
+                                "idno",
+                                "name",
+                                "contacts",
+                                "vat_code",
+                                "address_ro",
+                                "address_en",
+                                "address_ru",
+                                "address_home",
+                                "identity_card",
+                                "identity_card_date",
+                                "administrator_name",
+                                "identity_card_issued",
+                                "client_bank_accounts"
+                            ],
+                            "param": []
+                        },
+                        "v1.clients.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "type",
+                                "idno",
+                                "name",
+                                "vat_code",
+                                "address_ro",
+                                "address_en",
+                                "address_ru",
+                                "address_home",
+                                "identity_card",
+                                "identity_card_date",
+                                "administrator_name",
+                                "identity_card_issued"
+                            ],
+                            "param": []
+                        },
+                        "v1.clients.info_for_request": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "type",
+                                "idno",
+                                "name",
+                                "address"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "currencies": {
+                    "actions": {
+                        "v1.currencies.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "value",
+                                "text"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "exchange_rates": {
+                    "actions": {
+                        "v1.exchange_rates.get_exchange": {
+                            "levels": "all",
+                            "fields": [
+                                "date",
+                                "value",
+                                "currency_id"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "client_bank_accounts": {
+                    "actions": {
+                        "v1.client_bank_accounts.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.client_bank_accounts.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.client_bank_accounts.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "bank_id",
+                                "client_id",
+                                "account"
+                            ],
+                            "param": []
+                        },
+                        "v1.client_bank_accounts.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "bank_id",
+                                "client_id",
+                                "account"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "packing_categories": {
+                    "actions": {
+                        "v1.packing_categories.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.packing_categories.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.packing_categories.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.packing_categories.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.packing_categories.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "authorized_persons": {
+                    "actions": {
+                        "v1.authorized_persons.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.authorized_persons.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.authorized_persons.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.authorized_persons.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.authorized_persons.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "name_en",
+                                "name_ro",
+                                "name_ru"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "menu_items": {
+                    "actions": {
+                        "v1.menu_items.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ru",
+                                "name_ro",
+                                "name_en",
+                                "link",
+                                "icon",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.menu_items.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ru",
+                                "name_ro",
+                                "name_en",
+                                "link",
+                                "icon",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.menu_items.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit_order_content.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit_order_holders.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    },
+                    "rules": {
+                        "v1.menu_items.rule1": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        }
+                    }
+                },
+                "roles": {
+                    "actions": {
+                        "v1.roles.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.edit_permissions.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "guard_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.roles.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "guard_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.roles.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "value",
+                                "text"
+                            ],
+                            "params": []
+                        }
+                    }
+                },
+                "banks": {
+                    "actions": {
+                        "v1.banks.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.banks.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.banks.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "code",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.banks.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "code",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.banks.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "goods": {
+                    "actions": {
+                        "v1.goods.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.goods.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.goods.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "code",
+                                "name_ro",
+                                "name_ru",
+                                "name_en",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.goods.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "code",
+                                "name_ro",
+                                "name_ru",
+                                "name_en",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.goods.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "code",
+                                "name_ro",
+                                "name_ru",
+                                "name_en"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "orders": {
+                    "actions": {
+                        "v1.orders.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.orders.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.orders.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "order",
+                                "countries",
+                                "goods",
+                                "documents",
+                                "payments"
+                            ],
+                            "param": []
+                        },
+                        "v1.orders.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "number",
+                                "carnet_number",
+                                "source",
+                                "status",
+                                "client",
+                                "manager_id",
+                                "tax_payed",
+                                "guaranty_payed",
+                                "created_at",
+                                "date_released"
+                            ],
+                            "param": []
+                        },
+                        "v1.orders.change_manager.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.orders.confirm_payment": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.orders.handle_payments": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        }
+                    }
+                },
+                "order_statuses": {
+                    "actions": {
+                        "v1.order_statuses.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.order_statuses.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "alias",
+                                "color"
+                            ],
+                            "param": []
+                        },
+                        "v1.order_statuses.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "alias",
+                                "color"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "employees": {
+                    "actions": {
+                        "v1.employees.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.employees.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.employees.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "phones",
+                                "email",
+                                "idnp",
+                                "gender",
+                                "birthdate",
+                                "is_active",
+                                "signature",
+                                "centers",
+                                "work_positions",
+                                "user_id",
+                                "user"
+                            ],
+                            "param": []
+                        },
+                        "v1.employees.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "phones",
+                                "email",
+                                "idnp",
+                                "gender",
+                                "birthdate",
+                                "is_active",
+                                "signature",
+                                "user_name",
+                                "centers",
+                                "work_positions"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "work_positions": {
+                    "actions": {
+                        "v1.work_positions.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.work_positions.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.work_positions.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.work_positions.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.work_positions.list": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "purposes_of_uses": {
+                    "actions": {
+                        "v1.purposes_of_uses.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.purposes_of_uses.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.purposes_of_uses.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "description_ro",
+                                "description_en",
+                                "description_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.purposes_of_uses.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "description_ro",
+                                "description_en",
+                                "description_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.purposes_of_use.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "value",
+                                "text",
+                                "description",
+                                "description_ro",
+                                "description_en",
+                                "description_ru"
+                            ],
+                            "param": []
+                        },
+                        "v1.purposes_of_use.info_for_request": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "description"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "system_variable_books": {
+                    "actions": {
+                        "v1.system_variable_books.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.system_variable_books.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.system_variable_books.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "alias",
+                                "value_ro",
+                                "value_en",
+                                "value_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.system_variable_books.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "alias",
+                                "value_ro",
+                                "value_en",
+                                "value_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.system_variable_books.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "alias",
+                                "value_ro",
+                                "value_en",
+                                "value_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        }
+                    }
+                },
+                "tariffs": {
+                    "actions": {
+                        "v1.tariffs.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.tariffs.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.tariffs.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "alias",
+                                "name_en",
+                                "name_ro",
+                                "name_ru",
+                                "values",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.tariffs.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "alias",
+                                "name_en",
+                                "name_ro",
+                                "name_ru",
+                                "values",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        },
+                        "v1.tariffs.list.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "alias",
+                                "name_en",
+                                "name_ro",
+                                "name_ru",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "param": []
+                        }
+                    }
+                }
+            },
+            "rules": {
+                "v1.rule1": {
+                    "levels": null,
+                    "fields": [],
+                    "param": []
+                }
+            }
+        },
+        "users": {
+            "modules": {
+                "users": {
+                    "actions": {
+                        "v1.users.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.edit.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "phones",
+                                "email",
+                                "position_name",
+                                "position_id",
+                                "avatar"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "email",
+                                "phones",
+                                "email_verified_at",
+                                "is_active",
+                                "position_name",
+                                "role_name",
+                                "project_name",
+                                "status_name",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "email",
+                                "phones",
+                                "position_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.profile.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.toggle_state.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.change_status.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.check_file.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.change_password.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.list.specialists": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "email",
+                                "phones",
+                                "is_active"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.list.all": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

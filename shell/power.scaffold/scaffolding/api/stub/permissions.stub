@@ -1,0 +1,23 @@
+<?php
+
+return [
+    'list'    => [
+        'name'   => 'v1.{{MODULES}}.index.*',
+        'levels' => ['all', 'own'],
+        'fields' => [
+            {{FIELDS}}
+        ]
+    ],
+    'create'  => [
+        'name'   => 'v1.{{MODULES}}.create.*',
+        'levels' => ['all'],
+    ],
+    'edit'    => [
+        'name'   => 'v1.{{MODULES}}.edit.*',
+        'levels' => ['all', 'own'],
+    ],
+    'delete'  => [
+        'name'   => 'v1.{{MODULES}}.delete.*',
+        'levels' => ['all', 'own'],
+    ]
+];

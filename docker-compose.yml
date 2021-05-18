@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  # App service
+  app:
+    build:
+      context: ""
+    environment:
+      VIRTUAL_HOST: api.power.loc
+      XDEBUG_CONFIG: "remote_host=host.docker.internal"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    volumes:
+      - .:/var/www/html:delegated
+    restart: always
+    # Link db service to app container as "db"
+    links:
+      - "db:db"
+    network_mode: bridge
+
+  # Database service
+  db:
+    image: mysql
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: api
+      MYSQL_ROOT_PASSWORD: "123"
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    network_mode: bridge

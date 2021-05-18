@@ -1,0 +1,84 @@
+<?php
+
+
+namespace App\Http\Controllers\v1;
+
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\{{MODULE}}\{{MODULE}}Request;
+use App\Http\Resources\{{MODULE}}\{{MODULE}}ResourceCollection;
+use App\Models\{{MODULE}}\{{MODULE}};
+use App\Repositories\{{MODULE}}\{{MODULE}}Repository;
+use App\Templates\{{MODULE}}\{{MODULE}}Filter;
+use App\Templates\{{MODULE}}\{{MODULE}}Form;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Merax\Helpers\Helper;
+use Throwable;
+
+/**
+ * Class {{MODULE}}Controller
+ * @package App\Http\Controllers\v1
+ */
+class {{MODULE}}Controller extends Controller
+{
+    protected {{MODULE}}Repository $repository;
+
+    public function __construct({{MODULE}}Repository $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    public function index(): JsonResponse
+    {
+        return ok(new MainResourceCollection(
+            $this->repository->get(),
+            {{MODULE}}Resource::class,
+            'id'
+        ));
+    }
+
+    public function create({{MODULE}}Form $form): JsonResponse
+    {
+        return ok($form->build());
+    }
+
+    public function store({{MODULE}}Request $request): JsonResponse
+    {
+        $attributes = $request->only($this->repository->getFillable());
+        ${{LOWER_CASE_MODULE}} = {{MODULE}}::create($attributes);
+
+        return created($country);
+    }
+
+    public function edit({{MODULE}} ${{LOWER_CASE_MODULE}}, {{MODULE}}Form $form): JsonResponse
+    {
+        $form->dataObject()->set(${{LOWER_CASE_MODULE}});
+
+        return ok($form->build());
+    }
+
+    public function update({{MODULE}}Request $request, {{MODULE}} ${{LOWER_CASE_MODULE}}): JsonResponse
+    {
+        Helper::checkConcurrentRequests($country);
+        $attributes = $request->only($this->repository->getFillable());
+
+        ${{LOWER_CASE_MODULE}}->update($attributes);
+
+        return updated(${{LOWER_CASE_MODULE}});
+    }
+
+    public function destroy(Request $request): ?JsonResponse
+    {
+        try {
+            DB::beginTransaction();
+            {{MODULE}}::find($request->id ?? 0)->delete();
+            DB::commit();
+            return destroyed();
+        } catch (Throwable $throwable) {
+            DB::rollBack();
+            return failed();
+        }
+    }
+}

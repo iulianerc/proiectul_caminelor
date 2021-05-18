@@ -1,0 +1,33 @@
+<?php
+
+
+namespace App\Templates\{{MODULE}};
+
+
+use App\Builders\Schema\Components\DateRangePicker;
+use App\Builders\Schema\Components\Input;
+use App\Builders\Schema\Components\Select;
+use App\Builders\Schema\Filter;
+use App\Builders\Schema\Layouts\Layout;
+use App\Builders\Schema\Layouts\Samples\InlineLayout;
+use Illuminate\Support\Collection;
+
+/**
+ * Class {{MODULE}}Filter
+ * @package App\Templates\{{MODULE}}
+ */
+class {{MODULE}}Filter extends Filter
+{
+    /**
+     * @return array
+     */
+    protected function components(): array
+    {
+        return [];
+    }
+
+    protected function layout(Collection $fields): ?Layout
+    {
+        return InlineLayout::create();
+    }
+}

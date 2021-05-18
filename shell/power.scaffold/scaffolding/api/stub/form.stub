@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Templates\{{MODULE}};
+
+use App\Builders\Schema\Components\Input;
+use App\Builders\Schema\Form;
+use App\Builders\Schema\Layouts\Layout;
+use App\Builders\Schema\Layouts\Samples\NamedAreasLayout;
+use Illuminate\Support\Collection;
+
+/**
+ * Class {{MODULE}}Form
+ * @package App\Templates\{{MODULE}}
+ */
+class {{MODULE}}Form extends Form
+{
+    protected function components(): array
+    {
+        return [];
+    }
+
+    protected function rules(): void
+    {
+        $this->setRulesFromRequest({{MODULE}}Request::class);
+    }
+
+    protected function layout(Collection $fields): ?Layout
+    {
+        return NamedAreasLayout::create();
+    }
+}

@@ -1,0 +1,18 @@
+<?php
+
+return [
+    'title'   => '{{MODULES}}',
+    'model'   => [
+        'one'      => '{{MODULE}}',
+        'multiple' => '{{MODULES}}',
+    ],
+    'actions' => [
+        'list'   => 'List',
+        'create' => 'Create',
+        'edit'   => 'Edit',
+        'delete' => 'Delete'
+    ],
+    'fields'  => [
+        {{FIELDS}}
+    ]
+];

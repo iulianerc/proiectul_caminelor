@@ -1,0 +1,37 @@
+<?php
+
+namespace seeds\com;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
+
+/**
+ * Class {{MODULES}}TableSeeder
+ * @package seeds\com
+ */
+class {{MODULES}}TableSeeder extends Seeder
+{
+    private string $table = '{{LOWER_CASE_MODULES}}';
+
+    public function run(): void
+    {
+        foreach ($this->getDump() as ${{LOWER_CASE_MODULE}}) {
+            ${{LOWER_CASE_MODULE}}['author_id'] = 1;
+            ${{LOWER_CASE_MODULE}}['created_at'] = now();
+            ${{LOWER_CASE_MODULE}}['updated_at'] = now();
+
+            DB::table($this->table)->insertOrIgnore(${{LOWER_CASE_MODULE}});
+        }
+    }
+
+    private function getDump(): array
+    {
+        return [];
+    }
+
+    public function get(array $fields): Collection
+    {
+        return DB::table($this->table)->get($fields);
+    }
+}
