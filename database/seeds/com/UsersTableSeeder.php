@@ -108,48 +108,6 @@ class UsersTableSeeder extends Seeder
                 'created_at'          => now(),
                 'updated_at'          => now(),
             ]);
-
-            DB::table('contacts')->insertOrIgnore(
-                collect($user['phones'])->map(fn($phone) => [
-                    'type' => 'phone',
-                    'value'        => $phone,
-                    'contactable_type'   => User::class,
-                    'contactable_id'     => $userID,
-                    'created_at'   => now(),
-                    'updated_at'   => now(),
-                ])->toArray()
-            );
-            DB::table('contacts')->insertOrIgnore(
-                collect($user['email'])->map(fn($email) => [
-                    'type' => 'email',
-                    'value'        => $email,
-                    'contactable_type'   => User::class,
-                    'contactable_id'     => $userID,
-                    'created_at'   => now(),
-                    'updated_at'   => now(),
-                ])->toArray()
-            );
-
-            $work_position = WorkPosition::where('name', $user['position'])->first();
-            if ($work_position) {
-                $employeeId = DB::table('employees')->insertGetId([
-                    'idnp'       => 1231231231230 + $userID,
-                    'name'       => $user['name'],
-                    'email'      => $user['email'],
-                    'gender'     => $user['gender'],
-                    'phones'     => implode(',', $user['phones']),
-                    'is_active'  => 1,
-                    'author_id'  => 1,
-                    'birthdate'  => now(),
-                    'user_id'    => $userID,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]);
-                DB::table('employees_work_positions')->insertOrIgnore([
-                    'employee_id'      => $employeeId,
-                    'work_position_id' => $work_position->id
-                ]);
-            }
         }
     }
 

@@ -63,15 +63,6 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/web.php'));
-
-        Route::prefix('webhooks')
-            ->middleware('web')
-            ->namespace($this->namespace)
-            ->group(static function () {
-                foreach (File::allFiles(base_path('routes/webhooks')) as $file) {
-                    require $file->getPathname();
-                }
-            });
     }
 
     /**

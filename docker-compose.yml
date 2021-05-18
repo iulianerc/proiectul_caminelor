@@ -6,7 +6,7 @@ services:
     build:
       context: ""
     environment:
-      VIRTUAL_HOST: api.power.loc
+      VIRTUAL_HOST: api.camine.loc
       XDEBUG_CONFIG: "remote_host=host.docker.internal"
       PHP_IDE_CONFIG: "serverName=Docker"
     volumes:
