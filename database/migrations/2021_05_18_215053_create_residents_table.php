@@ -15,6 +15,10 @@ class CreateResidentsTable extends Migration
     {
         Schema::create('residents', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('idnp', 13);
             $table->timestamps();
         });
     }

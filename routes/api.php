@@ -61,3 +61,10 @@ Route::get('statuses/{type}', 'v1\StatusController@getTyped')->name('statuses.ge
 |
 */
 Route::get('langs', fn() => ok(config('app.locales')));
+
+/*
+|--------------------------------------------------------------------------
+| Temp Routes
+|--------------------------------------------------------------------------
+|
+*/

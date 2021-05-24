@@ -2,6 +2,8 @@
 
 namespace Database\Seeders\com;
 
+use App\Models\Hostel;
+use App\Models\Resident;
 use Illuminate\Database\Seeder;
 
 class ResidentsSeeder extends Seeder
@@ -13,6 +15,6 @@ class ResidentsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Resident::factory()->count(20)->create();
     }
 }

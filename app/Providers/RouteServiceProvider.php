@@ -87,7 +87,7 @@ class RouteServiceProvider extends ServiceProvider
 
         Route::prefix('api/v1')
             ->name('v1.')
-            ->middleware(['api', 'auth:api', 'password.expired', 'redirect', 'permissions'])
+            ->middleware(['api'/*, 'auth:api', 'password.expired', 'redirect', 'permissions'*/])
             ->namespace('App\Http\Controllers\v1')
             ->group(static function () {
                 foreach (File::allFiles(base_path('routes/v1')) as $file) {

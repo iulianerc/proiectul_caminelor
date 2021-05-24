@@ -15,7 +15,14 @@ class CreateHostelRentsTable extends Migration
     {
         Schema::create('hostel_rents', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('hostel_id');
+            $table->unsignedBigInteger('resident_id');
+            $table->unsignedBigInteger('room_category_id');
             $table->timestamps();
+
+            $table->foreign('hostel_id')->on('hostels')->references('id')->onDelete('RESTRICT');
+            $table->foreign('resident_id')->on('residents')->references('id')->onDelete('RESTRICT');
+            $table->foreign('room_category_id')->on('room_categories')->references('id')->onDelete('RESTRICT');
         });
     }
 

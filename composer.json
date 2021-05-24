@@ -7,24 +7,6 @@
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/magadanuhak/helpers.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/magadanuhak/user-timezone.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/magadanuhak/file-server.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/magadanuhak/avatars.git"
-        }
-    ],
     "require": {
         "php": "^7.4",
         "ext-json": "*",
@@ -75,8 +57,11 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "github-oauth": {
-            "github.com": "198277785c6bd7aab275830834239106353d0e00"
+        "http-basic": {
+            "github.com": {
+                "username": "[magadanuhak]",
+                "password": "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"
+            }
         }
     },
     "extra": {

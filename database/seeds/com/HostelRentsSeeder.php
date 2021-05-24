@@ -2,6 +2,7 @@
 
 namespace Database\Seeders\com;
 
+use App\Models\HostelRent;
 use Illuminate\Database\Seeder;
 
 class HostelRentsSeeder extends Seeder
@@ -13,6 +14,6 @@ class HostelRentsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        HostelRent::factory()->count(20)->create();
     }
 }
