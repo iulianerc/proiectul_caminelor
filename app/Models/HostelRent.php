@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Traits\Mutator\BasicMutators;
+use App\Traits\Permission\ApplyPermissions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @method static create(array $attributes)
@@ -13,6 +15,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class HostelRent extends Model
 {
     use HasFactory;
+    use ApplyPermissions;
+    use BasicMutators;
 
     protected $fillable = [
         'hostel_id',
@@ -20,18 +24,18 @@ class HostelRent extends Model
         'room_category_id',
     ];
 
-    public function hostel(): HasOne
+    public function hostel(): BelongsTo
     {
-        return $this->hasOne(Hostel::class);
+        return $this->belongsTo(Hostel::class);
     }
 
-    public function room_category(): HasOne
+    public function room_category(): BelongsTo
     {
-        return $this->hasOne(RoomCategory::class);
+        return $this->belongsTo(RoomCategory::class);
     }
 
-    public function resident(): HasOne
+    public function resident(): BelongsTo
     {
-        return $this->hasOne(Resident::class);
+        return $this->belongsTo(Resident::class);
     }
 }

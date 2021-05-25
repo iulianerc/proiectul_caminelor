@@ -6,6 +6,24 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/magadanuhak/helpers.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/magadanuhak/user-timezone.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/magadanuhak/file-server.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/magadanuhak/avatars.git"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.4",
@@ -14,9 +32,9 @@
         "barryvdh/laravel-translation-manager": "^0.5.8",
         "darkaonline/l5-swagger": "^8.0",
         "dompdf/dompdf": "^1.0",
+        "fakerphp/faker": "^1.14",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
-        "fzaninotto/faker": "^1.9.1",
         "glorand/laravel-model-settings": "^4.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "iio/libmergepdf": "^4.0",
@@ -60,7 +78,7 @@
         "http-basic": {
             "github.com": {
                 "username": "[magadanuhak]",
-                "password": "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"
+                "password": "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"
             }
         }
     },

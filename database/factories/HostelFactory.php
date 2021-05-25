@@ -6,6 +6,13 @@ use App\Models\Hostel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator;
 
+
+/**
+ * Class HostelFactory
+ * @package Database\Factories
+ *
+ * @property Generator $faker
+ */
 class HostelFactory extends Factory
 {
     /**
@@ -22,13 +29,9 @@ class HostelFactory extends Factory
      */
     public function definition(): array
     {
-        /**
-         * @var  Generator $faker
-         */
-        $faker = new Generator();
-        dd($faker);
+
         return [
-            'name'       => $faker->name,
+            'name'       => $this->faker->company,
             'created_at' => now(),
             'updated_at' => now(),
         ];
