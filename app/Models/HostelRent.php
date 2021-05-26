@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class HostelRent extends Model
 {
     use HasFactory;
-    use ApplyPermissions;
     use BasicMutators;
 
     protected $fillable = [
@@ -29,7 +28,7 @@ class HostelRent extends Model
         return $this->belongsTo(Hostel::class);
     }
 
-    public function room_category(): BelongsTo
+    public function roomCategory(): BelongsTo
     {
         return $this->belongsTo(RoomCategory::class);
     }
