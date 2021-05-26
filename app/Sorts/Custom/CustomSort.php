@@ -10,31 +10,18 @@ use Spatie\QueryBuilder\Sorts\Sort;
 
 class CustomSort implements Sort
 {
-    protected string $owner_type;
-    protected string $table;
+    protected string $localForeign;
 
-    public function __construct (string $table, string $owner_type)
+    public function __construct (string $localForeign)
     {
-        $this->table = $table;
-        $this->owner_type = $owner_type;
+        $this->localForeign = $localForeign;
     }
 
     public function __invoke (Builder $query, bool $descending, string $property): Builder
     {
-        $direction = $descending ? 'desc' : 'asc';
-
+        $table = explode('.', $property)[0];
         return $query
-            ->join('contacts', function (JoinClause $join) {
-                $join
-                    ->on("{$this->table}.id", '=', 'contacts.contactable_id')
-                    ->where('contacts.contactable_type', $this->owner_type)
-                    ->where('contacts.type', 'phone');
-            })
-            ->groupBy("{$this->table}.id")
-            // TODO: Refactor
-            ->orderBy(
-                DB::raw("GROUP_CONCAT(contacts.value ORDER BY contacts.value {$direction})"),
-                $direction
-            );
+            ->join($table, "hostel_rents.{$this->localForeign}", "{$table}.id")
+            ->orderBy($property, $descending ? 'desc' : 'asc');
     }
 }
